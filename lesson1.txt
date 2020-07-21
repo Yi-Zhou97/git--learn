@@ -1,0 +1,6 @@
+repository 仓库用来存放代码，每个项目对应一个仓库。
+star 收藏项目
+fork 复制克隆项目（fork的项目是独立存在的）
+pull request ：propose the changes; request someone review; pull in your contribution; merge them into their branch
+watch 关注项目
+issue 讨论时用
