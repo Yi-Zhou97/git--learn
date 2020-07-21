@@ -12,7 +12,7 @@ git add test.php
 
 从暂存区到Git Repository:
 git status
-git commit -m “提交描述”
+git commit -m '提交描述'
 
 最后git status查看
 
@@ -23,5 +23,42 @@ Git初始化及仓库创建和操作
 git config --global user.name 'Yi-Zhou97'
 设置用户名邮箱
 git config --global user.name '827005831@qq.com'
+查看设置
+git config --list
 
 2.初始化一个新的git仓库
+创建文件夹 
+mkdir ’名称‘     名称以test为例
+在文件内初始化Git（创建Git仓库）
+cd test
+git init
+
+3.向仓库提交文件
+创建文件 
+touch demo1
+git status
+
+添加到暂存区
+git add demo1
+git status
+
+文件从暂存区到仓库
+git commit -m 'add deom1'
+git status
+
+4.修改仓库文件
+修改文件： vi demo1
+         修改后 wq保存
+         cat demo1：可以查看demo1
+git add demo1
+git status
+git commit -m 'add deom1'
+git status(从工作区到暂存区，再到仓库)
+
+5.删除仓库文件
+删除文件
+rm -rf demo1
+从Git中删除文件
+git rm demo1
+提交操作 
+git commit -m '提交描述' e.g.第一次通过Git删除仓库文件
