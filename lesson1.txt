@@ -1,6 +1,6 @@
 repository 仓库用来存放代码，每个项目对应一个仓库。
 star 收藏项目
 fork 复制克隆项目（fork的项目是独立存在的）
-pull request ：propose the changes; request someone review; pull in your contribution; merge them into their branch
+pull request ：propose the changes; request someone review; pull in your contribution; merge them into their branch. A forked B and A make some changes. A will put up a pull request to B. After check, B will merge the pull request.（1.fork项目 2.修改自己仓库的项目代码 3.发起pull request 4.等待作者审核）
 watch 关注项目
-issue 讨论时用，发现代码bug，目前没有成型代码；或者使用开源项目出现问题时使用
+issue 讨论时用，发现代码bug，目前没有成型代码；或者使用开源项目出现问题时使用(提交使用问题或者建议或者想法)
