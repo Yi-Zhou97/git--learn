@@ -22,7 +22,7 @@ Git初始化及仓库创建和操作
 设置用户名
 git config --global user.name 'Yi-Zhou97'
 设置用户名邮箱
-git config --global user.name '827005831@qq.com'
+git config --global user.email '827005831@qq.com'
 查看设置
 git config --list
 
@@ -62,3 +62,17 @@ rm -rf demo1
 git rm demo1
 提交操作 
 git commit -m '提交描述' e.g.第一次通过Git删除仓库文件
+
+
+四.Git远程仓库
+目的：备份
+
+Git克隆
+目的 ：将远程仓库（github对应的项目）复制到本地
+git clone 仓库地址url
+
+将本地仓库同步到Git远程仓库中
+1.创建文件 touch demo1
+2.添加到暂存区 git add demo1
+3.添加到本地仓库 git commit -m '提交描述'
+4.添加到远程仓库 git push
