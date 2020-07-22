@@ -61,3 +61,5 @@ $ cp -r father family
 $ mkdir Documents
 $ touch file1
 $ mv file1 Documents
+
+vim使用: https://www.cnblogs.com/itech/archive/2009/04/17/1438439.html
