@@ -1,0 +1,63 @@
+按键	作用
+Ctrl+d	键盘输入结束或退出终端
+Ctrl+s	暂停当前程序，暂停后按下任意键恢复运行
+Ctrl+z	将当前程序放到后台运行，恢复到前台为命令fg
+Ctrl+a	将光标移至输入行头，相当于Home键
+Ctrl+e	将光标移至输入行末，相当于End键
+Ctrl+k	删除从光标所在位置到行末
+Alt+Backspace	向前删除一个单词
+Shift+PgUp	将终端显示向上滚动
+Shift+PgDn	将终端显示向下滚动
+
+字符	含义
+*	匹配 0 或多个字符
+?	匹配任意一个字符
+[list]	匹配 list 中的任意单一字符
+[^list]	匹配 除 list 中的任意单一字符以外的字符
+[c1-c2]	匹配 c1-c2 中的任意单一字符 如：[0-9][a-z]
+{string1,string2,...}	匹配 string1 或 string2 (或更多)其一字符串
+{c1..c2}	匹配 c1-c2 中全部字符 如{1..10}
+
+查看某一个目录的完整属性，而不是显示目录里面的文件属性：
+$ ls -dl <目录名>
+
+显示所有文件大小，并以普通人类能看懂的方式呈现：
+$ ls -asSh
+
+使用 cd 命令可以切换目录，在 Linux 里面使用 . 表示当前目录，.. 表示上一级目录（注意，我们上一节介绍过的，以 . 开头的文件都是隐藏文件，
+所以这两个目录必然也是隐藏的，你可以使用 ls -a 命令查看隐藏文件）, - 表示上一次所在目录，～ 通常表示当前用户的 home 目录。使用 pwd 命令可以获取当前所在路径（绝对路径）。
+
+进入上一级目录：
+$ cd ..
+
+进入你的 home 目录：
+$ cd ~
+
+使用 pwd 获取当前路径：
+$ pwd
+
+创建名为 test 的空白文件，因为在其它目录没有权限，所以需要先 cd ~ 切换回 shiyanlou 用户的 Home 目录：
+$ cd ~
+$ touch test
+
+用 mkdir（make directories）命令可以创建一个空目录，也可同时指定创建目录的权限属性。使用 -p 参数，同时创建父目录。
+创建名为“ mydir ”的空目录：
+$ mkdir mydir
+
+用 cp 命令（copy）复制一个文件到指定目录。
+将之前创建的 test 文件复制到 /home/shiyanlou/father/son/grandson 目录中：
+$ cp test father/son/grandson
+
+要成功复制目录需要加上 -r 或者 -R 参数，表示递归复制：
+$ cd /home/shiyanlou
+$ mkdir family
+$ cp -r father family
+
+直接删除文件，可以使用 -f 参数强制删除：$ rm -f test
+遇到权限不足删除不了的目录也可以和删除文件一样加上 -f 参数：$ rm -rf family
+
+移动的命令格式： mv 源目录文件 目的目录。
+例如将文件“ file1 ”移动到 Documents 目录：
+$ mkdir Documents
+$ touch file1
+$ mv file1 Documents
