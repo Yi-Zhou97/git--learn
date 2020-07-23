@@ -4,7 +4,16 @@ git checkout name:从master转到name branch
 git merge name:master融合另一个分支name
 git rebase master:将name分支的工作直接移到master的分支上
 git branch name -f othername:强制转移
-git reset HEAD~?:后退上移
+git reset HEAD~?:后退上移(本地)
 git revert HEAD:撤退会产生一个新的,不上移,用于远程
 git cherry-check name name name:从master复制一些节点
 git rebase -i HEAD~num:交互式
+git fetch:从远程仓库获取数据.从远程仓库下载本地仓库中缺失的提交记录;更新远程分支指针(如 o/master).并不会改变你本地仓库的状态。它不会更新你的 master 分支，也不会修改你磁盘上的文件。
+当远程分支中有新的提交时，你可以像合并本地分支那样来合并远程分支。也就是说就是你可以执行以下命令:
+git cherry-pick o/master
+git rebase o/master
+git merge o/master
+git pull:先抓取更新再合并到本地分支(git fetch+git merge)
+git push:负责将你的变更上传到指定的远程仓库，并在远程仓库上合并你的新提交记录
+git fetch;git rebash o/master;git push
+git pull --rebash = fetch + rebash
