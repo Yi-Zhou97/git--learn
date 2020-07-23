@@ -1,0 +1,5 @@
+git commit:修改并且创建基于之前的branch
+git branch name:创建新的name branch
+git checkout name:从master转到name branch
+git merge name:master融合另一个分支name
+git rebase master:将name分支的工作直接移到master的分支上
