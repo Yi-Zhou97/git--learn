@@ -3,3 +3,8 @@ git branch name:创建新的name branch
 git checkout name:从master转到name branch
 git merge name:master融合另一个分支name
 git rebase master:将name分支的工作直接移到master的分支上
+git branch name -f othername:强制转移
+git reset HEAD~?:后退上移
+git revert HEAD:撤退会产生一个新的,不上移,用于远程
+git cherry-check name name name:从master复制一些节点
+git rebase -i HEAD~num:交互式
