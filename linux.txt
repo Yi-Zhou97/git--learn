@@ -62,4 +62,10 @@ $ mkdir Documents
 $ touch file1
 $ mv file1 Documents
 
-vim使用: https://www.cnblogs.com/itech/archive/2009/04/17/1438439.html
+ vi/vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）
+ vi操作：https://www.cnblogs.com/itech/archive/2009/04/17/1438439.html
+ 
+ 创建一个 Shell 脚本文件，你可以使用 gedit，vim，sublime 等工具编辑。如果你是直接复制的话，建议使用 gedit 或者 sublime，否则可能导致代码缩进混乱。
+$ cd /home/shiyanlou
+$ touch hello_shell.sh
+$ gedit hello_shell.sh
